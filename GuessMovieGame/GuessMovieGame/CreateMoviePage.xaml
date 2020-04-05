@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GuessMovieGame.CreateMoviePage">
+    <ContentPage.Content>
+        <StackLayout Padding ="20">
+            <Label Text="Добавь свой фильм!"
+                   FontSize="22"
+                   TextColor="Black"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center"
+                   Margin="50"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Русский фильм" VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+                <CheckBox x:Name="RusMovieCheckBox" />
+                <Label Text="Иностранный фильм" VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+                <CheckBox x:Name="InterMovieCheckBox"/>
+            </StackLayout>
+            <Entry x:Name="addMovieName" Placeholder="Добавь название"
+                   VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                   Margin="20"/>            
+            <Entry x:Name="addMovieDesc" Placeholder="Добавь подсказку(описание)"
+                   VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+            <Button x:Name="AddMovieButton" Text="Добавить" BackgroundColor="LightBlue" Clicked="AddMovieButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
